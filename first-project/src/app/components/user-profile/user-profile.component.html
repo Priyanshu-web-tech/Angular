@@ -1,0 +1,73 @@
+<!-- <h1>This is User Profile</h1>
+<h4>
+  Name - {{ name | titlecase }} Status-{{ status }} salary -
+  {{ salary | currency : "INR" }}
+</h4>
+
+<h2>
+  {{ phoneno | countryCode : "USA" }}
+</h2>
+<button [disabled]="isBtnDisabled">Click Me</button>
+
+<h1>input value -{{ inputVal }}</h1>
+
+<input type="text" (input)="onChange($event)" [value]="inputVal" />
+
+<input type="text" [(ngModel)]="inputVal" />
+
+<div>
+  @for(user of users;track user.name){ @if(user.salary>10000){
+  <h4>
+    Name - {{ user.name.toUpperCase() }} Status-{{
+      user.isSingle ? "Single" : "Coder"
+    }}
+    salary -
+    {{ user.salary }}
+  </h4>
+  }@else{
+
+  <h4>
+    Name - {{ user.name.toUpperCase() }} Status-{{
+      user.isSingle ? "Single" : "Coder"
+    }}
+    salary - hidden
+  </h4>
+
+  } }
+</div>
+
+<br />
+<h2>Using Directives</h2>
+<hr />
+
+<div *ngFor="let user of users">
+  <h4 *ngIf="user.salary > 10000; else elseBlock">
+    Name - {{ user.name.toUpperCase() }} Status-{{
+      user.isSingle ? "Single" : "Coder"
+    }}
+    salary -
+    {{ user.salary }}
+  </h4>
+  <ng-template #elseBlock>
+    <h4>
+      Name - {{ user.name.toUpperCase() }} Status-{{
+        user.isSingle ? "Single" : "Coder"
+      }}
+      salary - hidden
+    </h4>
+  </ng-template>
+</div>
+-->
+
+<!-- <h1 #myheading  appHighlight>
+  Name -{{ name }} Status-{{ isSingle ? "Single" : "Coder" }} salary -
+  {{ salary }}
+</h1> -->
+
+<!-- With Signalled NAme -->
+<h1 #myheading  appHighlight>
+  Name -{{ name() }} Status-{{ isSingle ? "Single" : "Coder" }} salary -
+  {{ salary }}
+</h1>
+<button (click)="sendData()">send Data</button>
+

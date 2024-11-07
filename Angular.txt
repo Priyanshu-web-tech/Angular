@@ -1,0 +1,79 @@
+CREATE PROJECT:
+ng new Project-Name
+
+Generate components -> ng g c components/componentName
+Interpolation - Defining values in ts file of component and using them in template file.Syntax: {{name}}
+Property Binding -> <button [disabled]="isBtnDisabled" >Click Me</button>
+Event Handling-> <input type="text" (input)="onChange()"> WE NEED TP DEFINE THIS FUNCTION IN ts FILE
+2-WAY Data binding
+Directives- Structural(for,if...) and Attribute directives-eg:ngModel:
+<!-- If using below syntax then we do not require onChange() function -->
+<input type="text" [(ngModel)]="inputVal" /> 	 
+
+Decorators-Helps in communication b/w Parent and Child:
+Parent to Child -> Input Directive
+Child to Parent -> Output Directive(Event Emitter is also used)
+Pipes-Format Data,We can create custom Pipe with command:ng g p pipes/pipeName
+Custom Directives:ng g d directives/highlight
+
+
+ANGULAR LIFE CYCLE:
+First constructor and ngOnInt() are called
+
+Target any field in HTML -> Use template variable 
+
+
+SERVICES:
+Network Calls are generally put here AND used to manage Global States
+-> Generate services:ng g s services/joke
+
+State Management:
+Using SERVICES -> Define the data in a Service and use/change it in multiple components using the service
+TO keep the state independent,USE   providers: [ServiceName] in the differentiating component
+
+
+
+In Project:
+
+ROUTING: LazyLoading-Creates a separate bundle for that page/component
+
+FORMS:
+1.)Reactive Form  -Most Code is written in ts file [IT IS USED MOSTLY IN BIG PROJECTS]
+2.)Template driven Form - Most code is written in html file
+
+
+AUTH GUARD:ng g guard auth
+
+
+
+Angular 17 Features:
+
+1.)SIGNALS: When UI needed to be updated frequently then we should create the updating state to be signal to improve performance- NOT MUCH USED 
+
+2.) Deferrable Views -  Lazy Loading part of a Component and with much more control like showing loading,showing component as per actions and viewport ,etc..
+
+Build Command:
+npm run build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

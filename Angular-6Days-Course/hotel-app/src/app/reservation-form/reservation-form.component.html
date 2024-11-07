@@ -1,0 +1,64 @@
+<app-home></app-home>
+
+<div class="container my-5">
+  <h2 class="mb-4">Reservation Form</h2>
+
+  <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+      <label for="checkInDate">Check-In Date:</label>
+      <input type="date" class="form-control" formControlName="checkInDate" />
+      <div
+        *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched"
+        class="text-danger mt-1"
+      >
+        Check In Date is required
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="checkOutDate">Check-Out Date:</label>
+      <input type="date" class="form-control" formControlName="checkOutDate" />
+      <div
+        *ngIf="reservationForm.get('checkOutDate')?.invalid && reservationForm.get('checkOutDate')?.touched"
+        class="text-danger mt-1"
+      >
+        Check Out Date is required
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="guestName">Guest Name:</label>
+      <input type="text" class="form-control" formControlName="guestName" />
+      <div
+        *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched"
+        class="text-danger mt-1"
+      >
+        Guest Name is required
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="guestEmail">Guest Email:</label>
+      <input type="email" class="form-control" formControlName="guestEmail" />
+      <div
+        *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched"
+        class="text-danger mt-1"
+      >
+        Email is required
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+      <label for="roomNumber">Room Number:</label>
+      <input type="number" class="form-control" formControlName="roomNumber" />
+      <div
+        *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched"
+        class="text-danger mt-1"
+      >
+        Room Number is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="reservationForm.invalid">Submit</button>
+  </form>
+</div>

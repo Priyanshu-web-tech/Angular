@@ -1,0 +1,64 @@
+<div class="container my-5">
+    <!-- Page Header -->
+    <h1 class="text-center display-4 mb-4 text-primary">Create New Appointment</h1>
+  
+    <!-- Form Row -->
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4 shadow-sm border-0">
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input
+                [(ngModel)]="newAppointmentTitle"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Appointment Description"
+              />
+            </div>
+            <div class="col-md-4">
+              <input
+                [(ngModel)]="newAppointmentDate"
+                type="date"
+                class="form-control form-control-lg"
+                placeholder="Appointment Date"
+              />
+            </div>
+            <div class="col-md-2">
+              <button
+                class="btn btn-primary btn-lg w-100"
+                (click)="addAppointment()"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Appointment List Header -->
+    <h1 class="text-center display-5 mb-4 text-secondary">Appointment List</h1>
+  
+    <!-- Appointment List -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="list-group shadow-sm">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center py-3 mb-2 appointment-item"
+            *ngFor="let appointment of appointments; index as i"
+          >
+            <span class="fs-5">
+              {{ appointment.title }} - {{ appointment.date | date: "dd/MM/yyyy" }}
+            </span>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              (click)="deleteAppointment(i)"
+            >
+              Delete
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

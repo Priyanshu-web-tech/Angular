@@ -1,0 +1,30 @@
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, libero provident? Exercitationem minima dolorum eius.
+    Non aliquid tempore quisquam excepturi.</p>
+
+
+
+<!-- on interaction -> It will show the placeholder value until user makes some action with the component -->
+
+<!-- <button type="button" #generating>Hello!</button>
+
+
+@defer(on interaction(generating)){
+<app-heavy></app-heavy>
+} -->
+
+<!-- Similarly we have on hover -->
+
+
+
+<!-- On ViewPort allows the web page to only load the component when we are in that viewport ,It is only fetchhed when the part is visibble  -->
+@defer(on viewport){
+<app-heavy></app-heavy>
+}@placeholder{
+<!-- Some thing which is similar to our imported component -->
+<h3>Heavy Component</h3>
+}
+@loading(after 100s;minimum 1s){
+<h3>Content is Loading...</h3>
+}@error{
+<h3>Content failed to load!</h3>
+}

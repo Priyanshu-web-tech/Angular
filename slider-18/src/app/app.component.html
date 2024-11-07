@@ -1,0 +1,20 @@
+<router-outlet />
+
+<swiper-container
+  loop="true"
+  navigation="true"
+  slides-per-view="2"
+  speed="500"
+  pagination="true"
+  style="width: 400px"
+>
+  <swiper-slide *ngFor="let image of images" lazy="true">
+    <img [src]="image" loading="lazy" />
+  </swiper-slide>
+</swiper-container>
+
+<!-- loop="true"
+  navigation="true"
+  slides-per-view="2"
+  speed="500"
+  pagination="true" -->

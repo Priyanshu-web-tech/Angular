@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Add a smooth hover effect to list items */
+.list-group-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.list-group-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth button hover */
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Card smooth shadow transition */
+.card {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}

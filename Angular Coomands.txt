@@ -1,0 +1,13 @@
+1.) uninstall : npm uninstall -g @angular/cli
+2.) install:npm install -g @angular/cli
+   With Versions,16->npm install -g @angular/cli@16
+		,17->npm install -g @angular/cli@17
+3.)Compatible node vers.,16-> Node 18
+			,17,18-> Node 20
+
+
+
+npm install @ngrx/store@16.2 @ngrx/effects@16.2
+
+	
+

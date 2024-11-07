@@ -1,0 +1,17 @@
+<app-user-profile *ngFor="let u of users"  [userName]="u.name" [isSingle]="u.isSingle" [salary]="u.salary"
+(myEvent)="receivedData($event)"
+></app-user-profile>
+
+
+
+<button (click)="clear()" >clear users</button>
+
+
+<app-joke> </app-joke>
+
+<app-a> </app-a>
+
+<app-b1> </app-b1>
+
+
+
